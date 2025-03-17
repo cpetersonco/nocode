@@ -1,0 +1,15 @@
+workers_dev = true
+name = "my-worker"
+compatibility_date = "2025-03-11"
+compatibility_flags = ["nodejs_compat"]
+main = "./build/server/index.js"
+assets = { directory = "./build/client/" }
+
+[vars]
+VALUE_FROM_CLOUDFLARE = "Hello from Cloudflare"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "nocode"
+database_id = "ed3ccb60-4d2a-4f04-8c14-a4e377b77f58"
+migrations_dir = "drizzle"
